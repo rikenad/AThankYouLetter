@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [Header("GameObjects")]
-    [SerializeField] private GameObject _MainMenuScreen;
-    [SerializeField] private GameObject _HowToPlayScreen;
-    [SerializeField] private GameObject _CreditsScreen;
+    [SerializeField] private GameObject _SplashScreenCanvas;
+    [SerializeField] private GameObject _MainMenuCanvas;
+    [SerializeField] private GameObject _HowToPlayCanvas;
+    [SerializeField] private GameObject _CreditsCanvas;
 
     [Header("Buttons")]
     [SerializeField] private Button _StartButton;
@@ -49,12 +50,12 @@ public class MainMenu : MonoBehaviour
 
     private void OnHowToPlayButtonClicked()
     {
-        _HowToPlayScreen.SetActive(true);
+        _HowToPlayCanvas.SetActive(true);
     }
 
     private void OnCreditsButtonClicked()
     {
-        _CreditsScreen.SetActive(true);
+        _CreditsCanvas.SetActive(true);
     }
 
     private void OnExitButtonClicked()
@@ -64,11 +65,11 @@ public class MainMenu : MonoBehaviour
 
     private void OnBackToMainMenuButtonClicked()
     {
-        if (_CreditsScreen.activeInHierarchy)
+        if (_CreditsCanvas.activeInHierarchy)
         {
-            _CreditsScreen.SetActive(false);
+            _CreditsCanvas.SetActive(false);
             return;
         }
-        _HowToPlayScreen.SetActive(false);
+        _HowToPlayCanvas.SetActive(false);
     }
 }
