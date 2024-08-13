@@ -5,7 +5,7 @@ Game core concept: traveling to and through unknown enclaves by receiving suppor
 
 Status: In Progress.
 
-Anticipated release date: Spring 2024.
+Anticipated release date: TBD
 
 DESIGN NOTES:
 
